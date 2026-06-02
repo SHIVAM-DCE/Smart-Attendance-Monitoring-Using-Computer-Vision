@@ -24,7 +24,7 @@
 - [Troubleshooting](#troubleshooting)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
-- [Author](#author)
+- [Authors](#authors)
 - [License](#license)
 
 ---
@@ -133,13 +133,18 @@ Smart-Attendance-Monitoring-Using-Computer-Vision/
 │   └── background image.jpg
 │
 ├── data/                            # Student face dataset
-│   ├── user.22105111031.1.jpg      # Face samples per student
+│   ├── user.22105111031.1.jpg
 │   ├── user.22105111031.2.jpg
 │   ├── user.22105111021.1.jpg
 │   └── ... (hundreds of face images)
 │
+├── screenshots/                     # Project screenshots used in README
+│   ├── login.png
+│   ├── register.png
+│   ├── face_detected.png
+│   ├── training_process.png
+│   └── ... (UI screen captures)
 └── README.md                        # Project documentation
-
 ```
 
 ---
@@ -303,13 +308,6 @@ python main.py
 | **label_map.json** | Maps student IDs to names |
 | **attendence.csv** | CSV file with all attendance records |
 
-### Directories
-
-| Directory | Purpose |
-|-----------|---------|
-| **data/** | Stores captured face images for all students |
-| **college_image/** | UI background images and icons |
-
 ---
 
 ## 🧠 How It Works
@@ -333,7 +331,7 @@ python main.py
         ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
         │   STUDENT    │ │ ATTENDANCE   │ │ FACE RECOG   │
         │  MANAGEMENT  │ │   TRACKING   │ │  & TRAINING  │
-        │(student.py) │ │(attendence.py)│ │(face_rec.py) │
+        │(student.py)  │ │(attendence.py)│ │(face_rec.py) │
         └──────────────┘ └──────────────┘ └──────────────┘
                 │              │              │
                 └──────────────┼──────────────┘
@@ -344,32 +342,6 @@ python main.py
                     │ - Attendance Table   │
                     │ - Users Table        │
                     └──────────────────────┘
-                               
-        Face Recognition Flow:
-        ┌──────────────────────────────────────┐
-        │  1. Capture Frame from Webcam        │
-        │     (OpenCV)                         │
-        └──────────────────────────────────────┘
-                        │
-        ┌───────────────▼────────────────┐
-        │  2. Face Detection             │
-        │     (Haarcascade Classifier)   │
-        └───────────────────────────────┘
-                        │
-        ┌───────────────▼────────────────┐
-        │  3. Face Recognition           │
-        │     (Trained Classifier)       │
-        └───────────────────────────────┘
-                        │
-        ┌───────────────▼────────────────┐
-        │  4. Student Identification     │
-        │     (Label Mapping)            │
-        └───────────────────────────────┘
-                        │
-        ┌───────────────▼────────────────┐
-        │  5. Mark Attendance            │
-        │     (Update Database)          │
-        └───────────────────────────────┘
 ```
 
 ### Recognition Algorithm
@@ -385,28 +357,107 @@ python main.py
 
 ## 📸 Screenshots & Demo
 
-### Main Dashboard
-- Welcome screen with navigation buttons
-- Real-time date and time display
-- Quick access to all modules
+The `screenshots/` folder contains the UI image captures used throughout this documentation. Add or update the PNG files in `screenshots/` whenever the interface changes, and reference them here so the README stays in sync with the application.
 
-### Student Management
-- Student registration form
-- Database grid view with all students
-- Update/Delete functionality
-- Search and filter options
+### Available screenshots
+- `login.png`
+- `register.png`
+- `forgot_password.png`
+- `admin_access.png`
+- `admin_access2.png`
+- `main_dashboard.png`
+- `student_management.png`
+- `face_detected.png`
+- `face_recognition_module.png`
+- `train_data_set.png`
+- `training_process.png`
+- `training_complete.png`
+- `attendance_management.png`
+- `help_desk.png`
+- `developer_dashboard.png`
 
-### Face Recognition Module
-- Real-time camera feed display
-- Face detection bounding box
-- Live recognition with confidence score
-- Attendance marking confirmation
+### 🔐 Login Screen
+> Secure login portal with username/password authentication and account creation options.
 
-### Attendance Viewer
-- Date-wise attendance records
-- Student-wise history
-- Export to CSV functionality
-- Statistical reports
+![Login Screen](screenshots/login.png)
+
+---
+
+### 📝 Register Screen
+> New user registration form with security question setup for password recovery.
+
+![Register Screen](screenshots/register.png)
+
+---
+
+### 🔑 Forgot Password
+> Password recovery using pre-set security questions.
+
+![Forgot Password](screenshots/forgot_password.png)
+
+---
+
+### 🔒 Admin Access Control
+> Role-based access — certain features are restricted to admin users only.
+
+![Admin Access](screenshots/admin_access.png)
+
+![Admin Access Dialog](screenshots/admin_access2.png)
+
+---
+
+### 🏠 Main Dashboard
+> Central navigation hub with quick-access buttons to all system modules — Student Details, Detect Face, Attendance, Train Face, Photo Face, Developer, Help, and Exit.
+
+![Main Dashboard](screenshots/main_dashboard.png)
+
+---
+
+### 👨‍🎓 Student Management System
+> Full CRUD interface to register, update, delete, and search students with department, course, year, and semester filters.
+
+![Student Management](screenshots/student_management.png)
+
+---
+
+### 🎥 Face Recognition Module
+> Real-time camera feed with Haarcascade face detection. Recognized student details (ID, Roll No., Name, Department) are displayed live on screen with a green bounding box.
+
+![Face Recognition](screenshots/face_detected.png)
+
+![Face Recognition Module](screenshots/face_recognition_module.png)
+
+---
+
+### 🧠 Train Data SET
+> Training interface where captured face images are processed to build/update the facial classifier model.
+
+![Train Data Set](screenshots/train_data_set.png)
+
+![Training Process](screenshots/training_process.png)
+
+![Training Complete](screenshots/training_complete.png)
+
+---
+
+### 📊 Attendance Management System
+> View, filter, update, import/export attendance records. Supports CSV import and export for offline access.
+
+![Attendance Management](screenshots/attendance_management.png)
+
+---
+
+### 🛠️ Help Desk
+> Contact and support information for users.
+
+![Help Desk](screenshots/help_desk.png)
+
+---
+
+### 👨‍💻 Developer Dashboard
+> Team overview highlighting the three developers, their roles, key technologies used, and project description.
+
+![Developer Dashboard](screenshots/developer_dashboard.png)
 
 ---
 
@@ -498,18 +549,28 @@ Please ensure your code follows PEP 8 standards and includes documentation.
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
-**Shivam Kumar**
-- 📧 Email: shivamkumarkaimur@gmail.com
+This project was collaboratively developed by a team of three as a Final Year Project (2025–26):
+
+| Name | Role | Responsibilities |
+|------|------|-----------------|
+| **Shivam Kumar** | Lead Developer | Core ML pipeline, face detection algorithm, overall system architecture |
+| **Abhishek Kumar** | Backend Developer | Database design, student record management, attendance logic, system integration |
+| **Aatish Raj** | UI/UX Developer | Full interface design, user experience flows, usability testing |
+
+> *"Great things in technology are never done by one person — they are done by a team."*
+
+### Contact
+- 📧 **Shivam Kumar** — [shivamkumarkaimur@gmail.com](mailto:shivamkumarkaimur@gmail.com)
 - 🔗 GitHub: [@SHIVAM-DCE](https://github.com/SHIVAM-DCE)
-- 🎓 Student at Darbhanga College of Engineering
+- 🎓 Darbhanga College of Engineering
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -528,7 +589,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For issues, questions, or suggestions:
 - Open an issue on GitHub
 - Contact: shivamkumarkaimur@gmail.com
-- Check documentation in help.py
+- Check documentation in `help.py`
 
 ---
 
@@ -539,3 +600,4 @@ For issues, questions, or suggestions:
 ---
 
 *If you found this project helpful, please consider giving it a ⭐ star on GitHub!*
+

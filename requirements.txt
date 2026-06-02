@@ -1,0 +1,6 @@
+opencv-python
+Pillow
+mysql-connector-python
+numpy
+scikit-learn
+tensorflow
