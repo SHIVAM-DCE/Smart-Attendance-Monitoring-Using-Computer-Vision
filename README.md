@@ -535,6 +535,30 @@ The `screenshots/` folder contains the UI image captures used throughout this do
 
 ---
 
+## 🚀 Deploy
+
+### GitHub Release
+- A release tag has been created: `v1.0.0`
+- Push status is up to date and the tag is available on GitHub
+- To publish a GitHub release page, go to the repository's **Releases** section and create a new release from tag `v1.0.0`
+- Add the packaged executable as a release asset if you want users to download it directly
+
+### Windows Executable Package
+- The application has been packaged with PyInstaller into a standalone executable
+- Output file: `dist/main.exe`
+- To rebuild locally, install PyInstaller and run:
+
+```bash
+python -m pip install pyinstaller
+python -m PyInstaller --onefile --windowed main.py
+```
+
+### Notes
+- The package is intended for Windows desktop use
+- Keep the `screenshots/` and `data/` directories alongside your executable if the application relies on external resources
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! To contribute:
