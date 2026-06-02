@@ -4,6 +4,7 @@ from tkinter import ttk
 from tkinter import font
 from turtle import width
 from PIL import Image, ImageTk
+from utils import resource_path
 from tkinter import messagebox
 import mysql.connector
 from time import strftime
@@ -23,7 +24,7 @@ class Face_Recognition:
         title_lbl.place(x=0,y=0,width=1530,height=45)
 
     #first image
-        img_top=Image.open(r"college_image\background image.jpg")
+        img_top=Image.open(resource_path("college_image/background image.jpg"))
         img_top=img_top.resize((650,700), Image.LANCZOS)
         self.photoimg_top=ImageTk.PhotoImage(img_top)
 
@@ -33,7 +34,7 @@ class Face_Recognition:
 
 
         #second image
-        img_bottom=Image.open(r"college_image\background image.jpg")
+        img_bottom=Image.open(resource_path("college_image/background image.jpg"))
         img_bottom=img_bottom.resize((950,700), Image.LANCZOS)
         self.photoimg_bottom=ImageTk.PhotoImage(img_bottom)
 

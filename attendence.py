@@ -5,6 +5,7 @@ from tkinter import ttk
 from tkinter import font
 from turtle import width
 from PIL import Image, ImageTk
+from utils import resource_path
 from tkinter import messagebox
 import mysql.connector
 from time import strftime
@@ -38,7 +39,7 @@ class Attendance:
 
 
         #first image
-        img_top=Image.open(r"college_image\background image.jpg")
+        img_top=Image.open(resource_path("college_image/background image.jpg"))
         img_top=img_top.resize((800,200), Image.LANCZOS)
         self.photoimg_top=ImageTk.PhotoImage(img_top)
 
@@ -48,7 +49,7 @@ class Attendance:
 
 
         #second image
-        img_bottom=Image.open(r"college_image\background image.jpg")
+        img_bottom=Image.open(resource_path("college_image/background image.jpg"))
         img_bottom=img_bottom.resize((800,200), Image.LANCZOS)
         self.photoimg_bottom=ImageTk.PhotoImage(img_bottom)
 
@@ -58,7 +59,7 @@ class Attendance:
 
 
          #background image
-        img3=Image.open(r"college_image\background image.jpg")
+        img3=Image.open(resource_path("college_image/background image.jpg"))
         img3=img3.resize((1530,710), Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -75,7 +76,7 @@ class Attendance:
         Left_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Attendance Details",font=("times new roman",12,"bold"))
         Left_frame.place(x=10,y=10,width=730,height=580)
 
-        img_left=Image.open(r"college_image\background image.jpg")
+        img_left=Image.open(resource_path("college_image/background image.jpg"))
         img_left=img_left.resize((720,130), Image.LANCZOS)
         self.photoimg_left=ImageTk.PhotoImage(img_left)
 

@@ -1,6 +1,7 @@
 from tkinter import*
 from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
+from utils import resource_path
 import mysql.connector
 
 from main import Face_Recognition_System     #pip install Pillow
@@ -30,7 +31,7 @@ class Login_Window:
         self.var_securityA = StringVar()
         self.var_new_pass = StringVar()
 
-        self.bg_image = Image.open(r"college_image\login_bg.png")
+        self.bg_image = Image.open(resource_path("college_image/login_bg.png"))
         self.bg_label = Label(self.root)
         self.bg_label.place(x=0,y=0,relwidth=1,relheight=1)
         self._resize_bg(self.root.winfo_screenwidth(), self.root.winfo_screenheight())
@@ -38,17 +39,17 @@ class Login_Window:
         self.root.bind("<Configure>", self._on_root_resize)
 
         # top header images and title like main.py
-        img_top1 = Image.open(r"college_image\background image.jpg")
+        img_top1 = Image.open(resource_path("college_image/background image.jpg"))
         img_top1 = img_top1.resize((510,130), Image.Resampling.LANCZOS)
         self.photoimg_top1 = ImageTk.PhotoImage(img_top1)
         Label(self.root, image=self.photoimg_top1).place(x=0,y=0,width=510,height=130)
 
-        img_top2 = Image.open(r"college_image\background image.jpg")
+        img_top2 = Image.open(resource_path("college_image/background image.jpg"))
         img_top2 = img_top2.resize((510,130), Image.Resampling.LANCZOS)
         self.photoimg_top2 = ImageTk.PhotoImage(img_top2)
         Label(self.root, image=self.photoimg_top2).place(x=510,y=0,width=510,height=130)
 
-        img_top3 = Image.open(r"college_image\background image.jpg")
+        img_top3 = Image.open(resource_path("college_image/background image.jpg"))
         img_top3 = img_top3.resize((510,130), Image.Resampling.LANCZOS)
         self.photoimg_top3 = ImageTk.PhotoImage(img_top3)
         Label(self.root, image=self.photoimg_top3).place(x=1020,y=0,width=510,height=130)
@@ -59,7 +60,7 @@ class Login_Window:
         frame=Frame(self.root,bg="black")
         frame.place(x=610,y=200,width=340,height=450)
 
-        img1=Image.open(r"college_image\username.jpg")
+        img1=Image.open(resource_path("college_image/username.jpg"))
         img1=img1.resize((100,100), Image.Resampling.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1) 
         lblimg1=Label(image=self.photoimg1,bg="black",borderwidth=0)
@@ -83,13 +84,13 @@ class Login_Window:
 
 
         #==============icon images=================
-        img2=Image.open(r"college_image\username.jpg")
+        img2=Image.open(resource_path("college_image/username.jpg"))
         img2=img2.resize((25,25), Image.Resampling.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
         lblimg2=Label(image=self.photoimg2,bg="black",borderwidth=0)
         lblimg2.place(x=650,y=355,width=25,height=25)
 
-        img3=Image.open(r"college_image\password.png")
+        img3=Image.open(resource_path("college_image/password.png"))
         img3=img3.resize((25,25), Image.Resampling.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
         lblimg3=Label(image=self.photoimg3,bg="black",borderwidth=0)
@@ -269,7 +270,7 @@ class Register_Window:
         self.var_cpass=StringVar()
 
 #=================background image=================
-        self.bg_image = Image.open(r"college_image\login_bg.png")
+        self.bg_image = Image.open(resource_path("college_image/login_bg.png"))
         self.bg_label = Label(self.root)
         self.bg_label.place(x=0,y=0,relwidth=1,relheight=1)
         self._resize_bg(self.root.winfo_screenwidth(), self.root.winfo_screenheight())
@@ -280,7 +281,7 @@ class Register_Window:
 
 
         #left image
-        left_img = Image.open(r"college_image\register_left.png")
+        left_img = Image.open(resource_path("college_image/register_left.png"))
         left_img = left_img.resize((470, 550), Image.Resampling.LANCZOS)
         self.bg1 = ImageTk.PhotoImage(left_img)
         left_lbl = Label(self.root, image=self.bg1)

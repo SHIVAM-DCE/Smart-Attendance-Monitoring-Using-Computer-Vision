@@ -550,12 +550,18 @@ The `screenshots/` folder contains the UI image captures used throughout this do
 
 ```bash
 python -m pip install pyinstaller
-python -m PyInstaller --onefile --windowed main.py
+python -m PyInstaller --onefile --windowed --add-data "college_image;college_image" main.py
 ```
 
 ### Notes
 - The package is intended for Windows desktop use
-- Keep the `screenshots/` and `data/` directories alongside your executable if the application relies on external resources
+- Keep these companion files/folders alongside `main.exe`:
+  - `haarcascade_frontalface_default.xml`
+  - `classifier.xml`
+  - `label_map.json`
+  - `attendence.csv`
+  - `data/` (student face dataset, if using training)
+- The `college_image` folder is now bundled into the executable for UI images
 
 ---
 

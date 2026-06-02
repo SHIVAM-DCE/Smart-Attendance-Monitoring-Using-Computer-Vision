@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import font
 from turtle import width
 from PIL import Image, ImageTk
+from utils import resource_path
 from tkinter import messagebox
 import mysql.connector
 import cv2
@@ -18,7 +19,7 @@ class Help:
         title_lbl.place(x=0,y=0,width=1530,height=45)
 
 
-        img_top=Image.open(r"college_image\background image.jpg")
+        img_top=Image.open(resource_path("college_image/background image.jpg"))
         img_top=img_top.resize((1530,325), Image.LANCZOS)
         self.photoimg_top=ImageTk.PhotoImage(img_top)
 

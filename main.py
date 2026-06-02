@@ -2,6 +2,7 @@ from tkinter import*
 from tkinter import ttk, messagebox
 import tkinter
 from PIL import Image, ImageTk
+from utils import resource_path
 import os
 from help import Help
 from student import Student
@@ -28,7 +29,7 @@ class Face_Recognition_System:
 
         # first image
         
-        img=Image.open(r"college_image\background image.jpg")
+        img=Image.open(resource_path("college_image/background image.jpg"))
         img=img.resize((510,130), Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
@@ -37,7 +38,7 @@ class Face_Recognition_System:
 
 
         # second image
-        img1=Image.open(r"college_image\background image.jpg")
+        img1=Image.open(resource_path("college_image/background image.jpg"))
         img1=img1.resize((510,130), Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
@@ -46,7 +47,7 @@ class Face_Recognition_System:
 
 
         # third image
-        img2=Image.open(r"college_image\background image.jpg")
+        img2=Image.open(resource_path("college_image/background image.jpg"))
         img2=img2.resize((1020,130), Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -56,7 +57,7 @@ class Face_Recognition_System:
 
 
         #background image
-        img3=Image.open(r"college_image\background image.jpg")
+        img3=Image.open(resource_path("college_image/background image.jpg"))
         img3=img3.resize((1530,710), Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -82,7 +83,7 @@ class Face_Recognition_System:
 
 
         #student button
-        img4=Image.open(r"college_image\studentDetails.jpg")
+        img4=Image.open(resource_path("college_image/studentDetails.jpg"))
         img4=img4.resize((220,220), Image.LANCZOS)
         self.photoimg4=ImageTk.PhotoImage(img4)
 
@@ -96,7 +97,7 @@ class Face_Recognition_System:
 
 
         #detect face button
-        img5=Image.open(r"college_image\face_Recog.jpg")
+        img5=Image.open(resource_path("college_image/face_Recog.jpg"))
         img5=img5.resize((220,220), Image.LANCZOS)
         self.photoimg5=ImageTk.PhotoImage(img5)
 
@@ -111,7 +112,7 @@ class Face_Recognition_System:
 
 
         #attendence face button
-        img6=Image.open(r"college_image\attendence.png")
+        img6=Image.open(resource_path("college_image/attendence.png"))
         img6=img6.resize((220,220), Image.LANCZOS)
         self.photoimg6=ImageTk.PhotoImage(img6)
 
@@ -126,7 +127,7 @@ class Face_Recognition_System:
 
 
         #help button
-        img7=Image.open(r"college_image\help.jpg")
+        img7=Image.open(resource_path("college_image/help.jpg"))
         img7=img7.resize((220,220), Image.LANCZOS)
         self.photoimg7=ImageTk.PhotoImage(img7)
 
@@ -141,7 +142,7 @@ class Face_Recognition_System:
 
 
         #train face button
-        img8=Image.open(r"college_image\Train_Face.jpg")
+        img8=Image.open(resource_path("college_image/Train_Face.jpg"))
         img8=img8.resize((220,220), Image.LANCZOS)
         self.photoimg8=ImageTk.PhotoImage(img8)
 
@@ -155,7 +156,7 @@ class Face_Recognition_System:
 
 
         #photo face button
-        img9=Image.open(r"college_image\photos.jpg")
+        img9=Image.open(resource_path("college_image/photos.jpg"))
         img9=img9.resize((220,220), Image.LANCZOS)
         self.photoimg9=ImageTk.PhotoImage(img9)
 
@@ -169,7 +170,7 @@ class Face_Recognition_System:
 
 
         #developer button
-        img10=Image.open(r"college_image\developer.jpg")
+        img10=Image.open(resource_path("college_image/developer.jpg"))
         img10=img10.resize((220,220), Image.LANCZOS)
         self.photoimg10=ImageTk.PhotoImage(img10)
 
@@ -183,7 +184,7 @@ class Face_Recognition_System:
 
 
         #exit button
-        img11=Image.open(r"college_image\exit.jpg")
+        img11=Image.open(resource_path("college_image/exit.jpg"))
         img11=img11.resize((220,220), Image.LANCZOS)
         self.photoimg11=ImageTk.PhotoImage(img11)
 

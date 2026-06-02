@@ -1,6 +1,7 @@
 from tkinter import*
 from tkinter import ttk, messagebox
 from PIL import Image, ImageTk   #pip install Pillow
+from utils import resource_path
 import mysql.connector
 
 class Register_Window:
@@ -21,7 +22,7 @@ class Register_Window:
         self.var_cpass=StringVar()
 
 #=================background image=================
-        self.bg_image = Image.open(r"college_image\login_bg.png")
+        self.bg_image = Image.open(resource_path("college_image/login_bg.png"))
         self.bg_label = Label(self.root)
         self.bg_label.place(x=0,y=0,relwidth=1,relheight=1)
         self._resize_bg(self.root.winfo_screenwidth(), self.root.winfo_screenheight())
@@ -32,7 +33,7 @@ class Register_Window:
 
 
         #left image
-        left_img = Image.open(r"college_image\register_left.png")
+        left_img = Image.open(resource_path("college_image/register_left.png"))
         left_img = left_img.resize((470, 550), Image.Resampling.LANCZOS)
         self.bg1 = ImageTk.PhotoImage(left_img)
         left_lbl = Label(self.root, image=self.bg1)

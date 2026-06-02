@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import font
 from turtle import width
 from PIL import Image, ImageTk
+from utils import resource_path
 from tkinter import messagebox
 import mysql.connector
 import cv2
@@ -35,7 +36,7 @@ class Student:
 
           # first image
         
-        img=Image.open(r"college_image\background image.jpg")
+        img=Image.open(resource_path("college_image/background image.jpg"))
         img=img.resize((510,130), Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
@@ -44,7 +45,7 @@ class Student:
 
 
         # second image
-        img1=Image.open(r"college_image\background image.jpg")
+        img1=Image.open(resource_path("college_image/background image.jpg"))
         img1=img1.resize((510,130), Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
@@ -53,7 +54,7 @@ class Student:
 
 
         # third image
-        img2=Image.open(r"college_image\background image.jpg")
+        img2=Image.open(resource_path("college_image/background image.jpg"))
         img2=img2.resize((1020,130), Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -61,7 +62,7 @@ class Student:
         f_lbl.place(x=1020,y=0,width=510,height=130)
 
          #background image
-        img3=Image.open(r"college_image\background image.jpg")
+        img3=Image.open(resource_path("college_image/background image.jpg"))
         img3=img3.resize((1530,710), Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -80,7 +81,7 @@ class Student:
         Left_frame.place(x=10,y=10,width=730,height=580)
 
 
-        img_left=Image.open(r"college_image\background image.jpg")
+        img_left=Image.open(resource_path("college_image/background image.jpg"))
         img_left=img_left.resize((720,130), Image.LANCZOS)
         self.photoimg_left=ImageTk.PhotoImage(img_left)
 
@@ -275,7 +276,7 @@ class Student:
         Right_frame.place(x=750,y=10,width=720,height=580)
 
 
-        img_left=Image.open(r"college_image\background image.jpg")
+        img_left=Image.open(resource_path("college_image/background image.jpg"))
         img_right=img_left.resize((720,130), Image.LANCZOS)
         self.photoimg_right=ImageTk.PhotoImage(img_right)
 
